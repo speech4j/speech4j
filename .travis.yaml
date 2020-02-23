@@ -1,0 +1,10 @@
+dist: trusty
+
+language: java
+
+jdk:
+  - oraclejdk11
+
+script:
+  - gradle clean
+  - gradle build
