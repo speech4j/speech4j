@@ -11,7 +11,14 @@ targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenLocal()
-//    mavenCentral()
+    mavenCentral()
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "speech4j-google"
+        property "sonar.projectKey", "speech4j_speech4j:speech4j-google"
+    }
 }
 
 dependencies {

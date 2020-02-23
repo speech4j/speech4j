@@ -15,6 +15,13 @@ repositories {
     mavenCentral()
 }
 
+sonarqube {
+    properties {
+        property "sonar.projectName", "speech4j-api"
+        property "sonar.projectKey", "speech4j_speech4j:speech4j-api"
+    }
+}
+
 java {
     withJavadocJar()
     withSourcesJar()
