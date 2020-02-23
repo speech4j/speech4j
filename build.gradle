@@ -1,0 +1,9 @@
+subprojects {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://artifacts.alfresco.com/nexus/content/repositories/public/"
+        }
+    }
+}
+

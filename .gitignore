@@ -1,0 +1,15 @@
+# IntelliJ
+out/
+.idea/
+*.iml
+
+# Sonarlint plugin
+.idea/sonarlint
+
+### Gradle ###
+.gradle
+build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+**/build/
