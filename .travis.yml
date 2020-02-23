@@ -6,5 +6,5 @@ jdk:
   - oraclejdk11
 
 script:
-  - gradle clean
-  - gradle build
+  - ./gradlew --version
+  - ./gradlew build
