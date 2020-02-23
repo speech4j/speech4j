@@ -1,9 +1,8 @@
-package org.speech4j;
+package org.speech4j.google;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.io.InputStream;
 
 public class MediaConverterImplTest {

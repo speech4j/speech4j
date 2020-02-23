@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven-publish'
+}
+
+group 'org.speech4j'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+}
+
+// https://docs.gradle.org/current/userguide/publishing_maven.html
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'speech4j-api'
+            version = '1.0-SNAPSHOT'
+            from components.java
+            pom {
+                name = 'Speech4j API'
+                description = 'The set of interfaces for Speech4j'
+                url = 'http://www.speech4j.org'
+                properties = [
+                        testProperty: "value",
+                        "test.property": "anotherValue"
+                ]
+            }
+        }
+    }
+}
+
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
