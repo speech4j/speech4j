@@ -13,6 +13,13 @@ repositories {
     mavenCentral()
 }
 
+sonarqube {
+    properties {
+        property "sonar.projectName", "speech4j-ibm"
+        property "sonar.projectKey", "speech4j_speech4j:speech4j-ibm"
+    }
+}
+
 dependencies {
     implementation project(':speech4j-api')
 //    implementation 'org.speech4j:speech4j-api:1.0-SNAPSHOT'

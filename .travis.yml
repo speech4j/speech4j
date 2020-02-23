@@ -1,6 +1,6 @@
 dist: trusty
-
-language: java
+#
+#language: java
 
 jdk:
   - oraclejdk11
@@ -11,6 +11,4 @@ addons:
     token:
       secure: $ENCRYPTED_VALUE_OF_TOKEN
 script:
-  - ./gradlew --version
-  - ./gradlew build
   - ./gradlew sonarqube
