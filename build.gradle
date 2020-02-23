@@ -15,5 +15,7 @@ subprojects {
 sonarqube {
     properties {
         property "sonar.projectKey", "speech4j_speech4j"
+        property "sonar.login", System.getenv('SONAR_LOGIN')
+        property "sonar.password", System.getenv('SONAR_PASSWORD')
     }
 }
