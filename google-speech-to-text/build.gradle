@@ -3,7 +3,7 @@ plugins {
     id 'idea'
 }
 
-group 'org.example'
+group 'org.speech4j'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 11
