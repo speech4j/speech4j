@@ -5,6 +5,12 @@ language: java
 jdk:
   - oraclejdk11
 
+addons:
+  sonarcloud:
+    organization: "speech4j"
+    token:
+      secure: $ENCRYPTED_VALUE_OF_TOKEN
 script:
   - ./gradlew --version
   - ./gradlew build
+  - ./gradlew sonarqube
