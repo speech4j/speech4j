@@ -17,7 +17,7 @@ repositories {
 sonarqube {
     properties {
         property "sonar.projectName", "speech4j-google"
-        property "sonar.projectKey", "speech4j_speech4j:speech4j-google"
+        property "sonar.projectKey", "speech4j:speech4j-google"
     }
 }
 
