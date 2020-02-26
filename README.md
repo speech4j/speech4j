@@ -2,7 +2,7 @@
 Speech to Text Wrapper for common most popular services
 https://blog.api.rakuten.net/top-10-best-speech-recognition-apis-google-speech-ibm-watson-speechapi-and-others/
 
-# Build Status
+# Project Status
 [![Build Status](https://travis-ci.com/speech4j/speech4j.svg?branch=master)](https://travis-ci.com/speech4j/speech4j) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=speech4j&metric=alert_status)](https://sonarcloud.io/dashboard/index/speech4j)
 
 ## Google

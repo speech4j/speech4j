@@ -15,6 +15,10 @@ addons:
 
 script:
   - ./gradlew sonarqube
+  - ./gradlew jacocoTestReport
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 cache:
   directories:
@@ -23,7 +27,10 @@ cache:
     - '$HOME/.gradle'
     - '.gradle'
 
+# https://adamweidner.com/posts/sonar-with-gradle-submodules/
 # https://sonarcloud.io/dashboard?id=speech4j_speech4j
 # https://github.com/SonarSource/sq-com_example_java-gradle-travis/blob/master/.travis.yml
 # https://testdriven.io/blog/getting-telegram-notifications-from-travis-ci/
 # https://docs.travis-ci.com/user/notifications/#configuring-slack-notifications
+# https://medium.com/@proustibat/using-sonarcloud-with-travis-ci-to-measure-and-continuously-improve-code-quality-5ea7fb5a587b
+# https://asus-aics.github.io/DeveloperGuide/pages/020_sonar_cloud/
