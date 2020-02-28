@@ -15,10 +15,10 @@ addons:
 
 script:
   - ./gradlew sonarqube
-  - ./gradlew jacocoTestReport
+  - ./gradlew codeCoverageReport
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -f "./build/customJacocoReportDir/codeCoverageReport/codeCoverageReport.xml"
 
 cache:
   directories:
