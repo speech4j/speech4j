@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group 'org.speech4j'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://maven.java.net/content/repositories/public"
+    }
+    maven {
+        url "http://repository.jboss.org/nexus/content/groups/public"
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled true
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "speech4j-tts-freetts"
+        property "sonar.projectKey", "speech4j:speech4j-tts-freetts"
+    }
+}
+
+dependencies {
+    implementation project(':speech4j-api')
+    compile 'org.mobicents.external.freetts:freetts:1.2.2'
+    compile 'org.mobicents.external.freetts:en_us:1.2.2'
+    compile 'org.mobicents.external.freetts:cmu_us_kal:1.2.2'
+    compile 'org.mobicents.external.freetts:cmu_time_awb:1.2.2'
+    compile 'org.mobicents.external.freetts:cmulex:1.2.2'
+    compile 'org.mobicents.external.freetts:cmutimelex:1.2.2'
+    compile 'org.mobicents.external.freetts:cmudict04:1.2.2'
+//    implementation 'org.speech4j:speech4j-api:1.0-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.0'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+

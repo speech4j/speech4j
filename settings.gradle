@@ -1,2 +1,4 @@
 rootProject.name = 'speech4j'
-include ':speech4j-api', ':speech4j-ibm', ':speech4j-google'
+include ':speech4j-api',
+        ':speech4j-recognizer-ibm', ':speech4j-recognizer-google',
+        ':speech4j-tts-google', ':speech4j-tts-freetts', ':speech4j-tts-ibm'
