@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class FreeTTSSpeechSynthesizerImplTest {
 
-    @Test
+//    @Test
     public void testTTSWithoutAssertions() {
         FreeTTSSpeechSynthesizerImpl speech = new FreeTTSSpeechSynthesizerImpl();
         speech.speak("Hello World");
