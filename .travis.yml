@@ -15,7 +15,7 @@ addons:
 
 script:
 #  - ./gradlew sonarqube
-  - ./gradlew build codeCoverageReport sonarqube
+  - ./gradlew build codeCoverageReport sonarqube --warning-mode all
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f "./build/jacocoReports/codeCoverageReport/codeCoverageReport.xml"
