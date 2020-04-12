@@ -14,8 +14,8 @@ addons:
       secure: "KoEoC5kRdOwrvsaO3DvRkSUrn3Fux6toyVA4gmMjQt0PaSNux1u9a13U2i1GjzaeSG8+y6Owx3C270ajxcp1lxK1+yfgHOeR+pVBjFaZrkxnG8JyXPJzJtoA+DhDYPyIucN4OKwAYCJykNqTeY3vz1oVqetzoxAgCu82oFqJ6TZ2QAn0Y6ahfuF3XV7VD7WehH6YdKFUBDb9lxWsQksDMzxFHzkpynkOhcWtDLpmVLM2bPfGWDI5NrGr/hlOkbSQnG1l82s4X0DmurjVUcfcl06PQZilnMHpnv7L305PHdu2s81GT9ULfAwQIMPMkBQDRL6XGoKZT49MgsRt6MK4VCm/oJ0xzSoLIxE+iYlA9VA/Rp5vR8KmqkJrlqzzclB3wy/1bXNEMh47i7xRguxAiV1lHkY51Z1WTYyFTldV7vKSXzyKGsEgB+VTFPpnHDgwK60tllHTaVfEYki92jBEF939iaw79RLb0ZHGyQvBbr+j5Y7Ma3zH5c91PyWqsUz825UkOdF7RgyhnRYQLo672JYvSq5GnNl7xsaiHYSlyVCshMNORrpEXU+VRUiUkOdHXojT19SoPqXMDyO4tYzvAKrYLJnBVb85jyTI67JVW//bUJAyJrdT9DEBm8M8UdFaWuJ+DzHy/u9zsV8elikB0n/1LHyzyzMnXW4IiSeAciA="
 
 script:
-  - ./gradlew codeCoverageReport
   - ./gradlew sonarqube
+  - ./gradlew codeCoverageReport
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f "./build/customJacocoReportDir/codeCoverageReport/codeCoverageReport.xml"

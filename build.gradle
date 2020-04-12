@@ -42,17 +42,18 @@ task codeCoverageReport(type: JacocoReport) {
     reports {
         xml.enabled true
         html.enabled true
-        csv.enabled true
+        csv.enabled false
     }
 }
 
 sonarqube {
     properties {
-        property "sonar.projectName", "Speech4j"
+        property "sonar.projectName", "speech4j"
         property "sonar.projectKey", "speech4j"
         property "sonar.organization", "speech4j"
         property "sonar.sourceEncoding", "UTF-8"
         property "sonar.login", "searhiy"
         property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.coverage.jacoco.xmlReportPaths", "./build/customJacocoReportDir/codeCoverageReport/codeCoverageReport.xml"
     }
 }
